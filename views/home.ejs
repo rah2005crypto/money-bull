@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financial Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .feature-card {
+            transition: transform 0.3s;
+            cursor: pointer;
+        }
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+        .card-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #0d6efd;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="/">FinTech Dashboard</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <span class="nav-link">Welcome, <%= user ? user.fullName : 'User' %></span>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/logout">Logout</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container my-5">
+        <h2 class="text-center mb-4">Financial Tools & Analysis</h2>
+        
+        <div class="row g-4">
+            <!-- Live Chart -->
+            <div class="col-md-4">
+                <div class="card feature-card h-100">
+                    <div class="card-body text-center">
+                        <i class="fas fa-chart-line card-icon"></i>
+                        <h5 class="card-title">Live Charts</h5>
+                        <p class="card-text">Real-time market data visualization with interactive charts and technical indicators.</p>
+                        <a href="/live-charts" class="btn btn-primary">View Charts</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Portfolio Checker -->
+            <div class="col-md-4">
+                <div class="card feature-card h-100">
+                    <div class="card-body text-center">
+                        <i class="fas fa-briefcase card-icon"></i>
+                        <h5 class="card-title">Portfolio Tracker</h5>
+                        <p class="card-text">Track and analyze your investment portfolio with detailed performance metrics.</p>
+                        <a href="/portfolio" class="btn btn-primary">Check Portfolio</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Option Chain -->
+            <div class="col-md-4">
+                <div class="card feature-card h-100">
+                    <div class="card-body text-center">
+                        <i class="fas fa-link card-icon"></i>
+                        <h5 class="card-title">Option Chain</h5>
+                        <p class="card-text">Analyze option prices, Greeks, and volatility with our advanced option chain tool.</p>
+                        <a href="/option-chain" class="btn btn-primary">View Options</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Market News -->
+            <div class="col-md-4">
+                <div class="card feature-card h-100">
+                    <div class="card-body text-center">
+                        <i class="fas fa-newspaper card-icon"></i>
+                        <h5 class="card-title">Market News</h5>
+                        <p class="card-text">Stay updated with the latest market news, analysis, and expert insights.</p>
+                        <a href="/news" class="btn btn-primary">Read News</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Screener -->
+            <div class="col-md-4">
+                <div class="card feature-card h-100">
+                    <div class="card-body text-center">
+                        <i class="fas fa-filter card-icon"></i>
+                        <h5 class="card-title">Stock Screener</h5>
+                        <p class="card-text">Find trading opportunities with our customizable stock screening tools.</p>
+                        <a href="/screener" class="btn btn-primary">Open Screener</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Learning Center -->
+            <div class="col-md-4">
+                <div class="card feature-card h-100">
+                    <div class="card-body text-center">
+                        <i class="fas fa-graduation-cap card-icon"></i>
+                        <h5 class="card-title">Learning Center</h5>
+                        <p class="card-text">Educational resources to help you understand markets and trading better.</p>
+                        <a href="/learn" class="btn btn-primary">Start Learning</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light py-4 mt-5">
+        <div class="container text-center">
+            <p>&copy; 2024 FinTech Dashboard. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
